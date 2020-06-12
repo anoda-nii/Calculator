@@ -1,4 +1,3 @@
-# Run this code in another IDE. This code is too advanced for Sololearn's IDE.
 
 # Calculator.
 def cal():
