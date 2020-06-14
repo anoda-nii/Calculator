@@ -7,33 +7,45 @@ def cal():
   sign = input("Sign --> ")
   num2 = int(input("Last number --> "))
   
-  if sign == "+" or sign == "-" or sign == "*" or sign == "/":
-    print("You want to calculate %s%s%s." % (num1, sign, num2))
+  if sign == "+" or sign == "-" or sign == "*" or sign == "/" or sign == "%":
+    print("You want to calculate %s %s %s." % (num1, sign, num2))
   
   if sign == "+":
-      result = int(num1) + int(num2)
-      print("The result is %s." % (result))
-      return result
+      print(add(num1,num2))
       
   elif sign == "-":
-        result = int(num1) - int(num2)
-        print("The result is %s." % (result))
+        print(sub(num1,num2))
         
   elif sign == "*":
-    result = num1 * num2
-    print("The result is %s." % (result))
+    print(mul(num1,num2))
 	
   elif sign == "/":
-	  result = num1 / num2
-	  print("The result is %s." % (result))
-	
-  elif sign == "**":
-	  result = num1**num2
-	  print("The result is %s." % (result))
+	  print(div(num1,num2))
 
   elif sign == "%":
-	  result = num1 % num2
-	  print("The result is %s." % (result))
+	  print(mod(num1, num2))
     
   else:
 	  print("Something went wrong.")
+
+def add(x,y):
+    """Add function"""
+    return x + y
+
+def sub(x,y):
+    """Subtract function"""
+    return x - y
+
+def div(x,y):
+    if y == 0:
+        raise ValueError('Cannot divide by zero')
+    #Divide function
+    return x / y
+
+def mul(x,y):
+    #"""Multiply function"""
+    return x * y
+
+def mod(x,y):
+    #"""Modulus function"""
+    return x % y
