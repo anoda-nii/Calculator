@@ -4,3 +4,4 @@ python:
   
 script:
   - python test_calculator.py
+  - python test_lineslope.py
