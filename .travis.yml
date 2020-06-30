@@ -1,6 +1,6 @@
 language: python
 python:
   - "3.8"
-
+  
 script:
-  - test_calculator.py
+  - python test_calculator.py
