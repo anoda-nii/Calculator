@@ -1,19 +1,23 @@
 # Line slope
 
-x, y = input("Enter x and y coordinates: ").split()
-x2, y2 = input("Enter the second x and y coordinates: ").split()
+def line():
+  x = int(input("Enter x coordinates: "))
+  y = int(input("Enter y coordinates: "))
+  x2= int(input("Enter the second x coordinates: "))
+  y2 = int(input("Enter the secondy coordinates: "))
 
-def lineslope():
       
-      print("The line slope is %s." % (result))
-
+  print("The line slope is %s." % (slope(ys(y2,y),xs(x2,x))))
 
 def ys(y2,y):
-        return y2-y
+    return y2-y
 def xs(x2,x):
-        return x2-x
+    return x2-x
 
-def result(ys,xs):
-         return ys/xs
+def slope(ys,xs):
+    if ys == xs:
+      raise ValueError('The points are the same')      
+      
+    return ys/xs
 
   
