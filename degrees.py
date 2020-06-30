@@ -5,7 +5,7 @@ def deg():
   degr = degr.lower()
   import math
   if degr == "cos":
-    result = math.cos(math.radians(int(nummer)))
+    result = math.cos(math.degrees(int(nummer)))
     print("The result is %s" % (result))
   
   elif degr == "sin":

@@ -17,6 +17,11 @@ class TestCalculator(unittest.TestCase):
         self.assertEqual(calculator.div(10, 5), 2)
         self.assertEqual(calculator.div(10, -5), -2)
         self.assertEqual(calculator.div(-10, -5), 2)
+
+        self.assertRaises(ValueError, calculator.div, 10,0)
+
+        with self.assertRaises(ValueError):
+            calculator.div(10, 0)
     
     def test_mul(self):    
         self.assertEqual(calculator.mul(10, 5), 50)

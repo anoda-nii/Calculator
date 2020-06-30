@@ -17,7 +17,7 @@ def t_if():
     vectorlength.length_vector()
 
   elif choice == "line slope":
-    lineslope.calc()
+    lineslope.lineslope()
   
   elif choice == "degrees":
     degrees.deg()
@@ -28,14 +28,14 @@ def t_if():
   else:
     print("Something went wrong. Make sure you spelled correctly.")
 
+while True:
+      print("Enter what type of calculations you want.")
+      print("You can choose 'Square root', 'Vector length', 'Calculator', 'Vector', 'Degrees' and 'Line slope'.")
 
-print("Enter what type of calculations you want.")
-print("You can choose 'Square root', 'Vector length', 'Calculator', 'Vector', 'Degrees' and 'Line slope'.")
+      choice = input("Enter here: ").lower()
 
-choice = input("Enter here: ").lower()
+      if len(choice) > 0:
+        t_if()
 
-if len(choice) > 0:
-  t_if()
-
-else:
-  print("Something went wrong. Make sure you spelled it correct.")
+      else:
+        print("Something went wrong. Make sure you spelled it correct.")
